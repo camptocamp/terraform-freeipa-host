@@ -14,8 +14,9 @@ data "template_file" "cloudinit_config" {
   template = file("${path.module}/templates/freeipa.cfg")
 
   vars = {
-    hostname = var.hostname
-    domain   = var.domain
-    password = random_password.otp.result
+    hostname   = var.hostname
+    domain     = var.domain
+    password   = random_password.otp.result
+    ip_address = var.ip_address
   }
 }

@@ -3,7 +3,12 @@ variable "hostname" {
 }
 
 variable "domain" {
-  type = string
+  type    = string
+  default = ""
+}
+
+variable "ip_address" {
+  type    = string
   default = ""
 }
 
