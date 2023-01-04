@@ -15,7 +15,7 @@ data "template_file" "cloudinit_config" {
 
   vars = {
     hostname = var.hostname
-    domain   = var.domain != null ? var.domain : ""
+    domain   = var.domain
     password = random_password.otp.result
   }
 }

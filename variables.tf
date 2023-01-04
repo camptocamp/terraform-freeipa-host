@@ -4,6 +4,7 @@ variable "hostname" {
 
 variable "domain" {
   type = string
+  default = ""
 }
 
 variable "force" {
